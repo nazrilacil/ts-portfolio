@@ -47,7 +47,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
-            <img src="/images/logo.png" className="h-8" />
+            <img src="/Images/logo.png" className="h-8" />
             </Link>
             <p className="text-gray-300 max-w-sm">
               Creating digital experiences that combine creativity with technical excellence.
