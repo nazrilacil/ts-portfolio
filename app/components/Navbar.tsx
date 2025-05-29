@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="relative group">
-              <img src="/images/logo.png" className="h-8" />
+              <img src="/Images/logo.png" className="h-8" />
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500/50 group-hover:w-full transition-all duration-300" />
             </Link>
 
