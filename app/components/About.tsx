@@ -23,7 +23,7 @@ export default function About() {
               <div className="relative rounded-lg overflow-hidden bg-white">
                 <Image
                   src="/Images/me.png"
-                  alt="Arthur Morgan"
+                  alt="Nazril Acil"
                   width={600}
                   height={700}
                   className="object-cover transition duration-300 group-hover:scale-105"
