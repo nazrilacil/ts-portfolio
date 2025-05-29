@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Template",
-  description: "Created by Vinodjangid.site",
+  title: "Nazril Acil | Portfolio",
+  description: "Portfolio Nazril Acil",
 };
 
 export default function RootLayout({
@@ -25,6 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="robots" content="noindex,nofollow" />
+      <meta name="robots" content="all" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

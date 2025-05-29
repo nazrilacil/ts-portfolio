@@ -1,12 +1,20 @@
 "use client";
 
+import { log } from "console";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+
+  const logos = [
+    '/kreate.jpeg',
+    '/icx.png',
+    '/finfolk.png'
+  ]
+
   return (
     <section className="relative min-h-screen flex items-center py-20">
       {/* Background Effects */}
-      <div className="absolute top-1/3 left-1/4 w-10 h-10 md:w-96 md:h-96 bg-purple-600/5 dark:bg-purple-600/10 rounded-full filter blur-3xl animate-pulse" />
+      <div className="absolute top-1/3 left-1/4 w-10 h-10 md:w-96 md:h-96 bg-sky-600/5 dark:bg-sky-600/10 rounded-full filter blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-10 h-10 md:w-80 md:h-80 bg-indigo-600/5 dark:bg-indigo-600/10 rounded-full filter blur-3xl animate-pulse delay-700" />
 
       {/* Main Content */}
@@ -24,7 +32,7 @@ export default function Hero() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="inline-block px-4 py-1.5 bg-purple-500/5 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium mb-6"
+              className="inline-block px-4 py-1.5 bg-sky-500/5 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 rounded-full text-sm font-medium mb-6"
             >
               Full Stack Developer
             </motion.span>
@@ -32,25 +40,24 @@ export default function Hero() {
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 dark:text-white leading-tight">
                 Hi, I&apos;m{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
-                  Arthur Morgan
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600">
+                  Nazril Acil
                 </span>
               </h1>
             </div>
 
             {/* Description */}
             <p className="text-gray-600 dark:text-gray-300 text-lg lg:text-xl mt-8 mb-10 leading-relaxed max-w-2xl">
-              A passionate Full Stack Developer specializing in building
-              exceptional digital experiences that drive business growth and
-              user engagement.
+              Educator, Software Engineering.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-              <motion.button
+              <motion.a
+              href="#projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-purple-500/25"
+                className="group relative px-8 py-4 bg-gradient-to-r from-sky-600 to-indigo-600 text-white rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-sky-500/25"
               >
                 <span className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <span className="relative flex items-center justify-center gap-2">
@@ -69,12 +76,13 @@ export default function Hero() {
                     />
                   </svg>
                 </span>
-              </motion.button>
+              </motion.a>
 
-              <motion.button
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-8 py-4 bg-transparent border border-purple-500/20 dark:border-purple-500/30 hover:border-purple-500 text-purple-600 dark:text-purple-400 rounded-xl transition-all duration-300 hover:bg-purple-500/5 dark:hover:bg-purple-500/10"
+                href="https://wa.me/6285175414118"
+                className="group px-8 py-4 bg-transparent border border-sky-500/20 dark:border-sky-500/30 hover:border-sky-500 text-sky-600 dark:text-sky-400 rounded-xl transition-all duration-300 hover:bg-sky-500/5 dark:hover:bg-sky-500/10"
               >
                 <span className="flex items-center justify-center gap-2">
                   Contact Me
@@ -92,7 +100,7 @@ export default function Hero() {
                     />
                   </svg>
                 </span>
-              </motion.button>
+              </motion.a>
             </div>
 
             {/* Social Proof */}
@@ -103,15 +111,17 @@ export default function Hero() {
               className="mt-12 flex items-center gap-8 justify-center lg:justify-start"
             >
               <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
+                {logos.map((src, i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full border-2 border-purple-500/20 dark:border-purple-500/30 bg-purple-500/5 dark:bg-purple-900/30"
-                  />
+                    className="w-10 h-10 rounded-full border-2 border-sky-500/20 dark:border-sky-500/30 bg-sky-500/40 dark:bg-sky-900/30"
+                  >
+                  <img src={src} alt={`Logo ${i + 1}`} className="h-9 cover rounded-full"/>
+                  </div>
                 ))}
               </div>
               <div className="text-gray-500 dark:text-gray-400">
-                <span className="text-purple-600 dark:text-purple-400 font-semibold">
+                <span className="text-sky-600 dark:text-sky-400 font-semibold">
                   50+
                 </span>{" "}
                 Projects Completed

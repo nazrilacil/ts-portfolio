@@ -1,43 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react"
 import Image from "next/image";
+import supabase from "@/lib/supabase";
 
-const projects = [
-  {
-    title: "EcoTrack Dashboard",
-    description: "A real-time analytics dashboard for environmental monitoring, built with Next.js and WebSocket for live data visualization.",
-    image: "/Images/project.jpg",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "WebSocket"],
-    demoUrl: "#",
-    githubUrl: "#",
-    color: "from-emerald-500 to-teal-500"
-  },
-  {
-    title: "CryptoFlow",
-    description: "Cryptocurrency trading platform with advanced charting capabilities and real-time market data integration.",
-    image: "/Images/project.jpg",
-    tags: ["React", "Node.js", "MongoDB", "WebSocket"],
-    demoUrl: "#",
-    githubUrl: "#",
-    color: "from-blue-500 to-indigo-500"
-  },
-  {
-    title: "AI Content Studio",
-    description: "Content generation platform powered by AI, helping creators produce high-quality content efficiently.",
-    image: "/Images/project.jpg",
-    tags: ["Next.js", "OpenAI", "PostgreSQL", "AWS"],
-    demoUrl: "#",
-    githubUrl: "#",
-    color: "from-purple-500 to-pink-500"
-  }
-];
+type Project = {
+  id: string
+  title: string
+  description: string
+  image: string
+  tags: string[]
+  demourl: string
+  githuburl: string
+  color: string
+}
+
 
 export default function Projects() {
+  const [projects, setProjects] = useState<Project[]>([])
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const { data, error } = await supabase.from("projects").select("*")
+      if (error) {
+        console.error("Gagal Ambil data", error)
+      } else {
+        setProjects(data)
+      }
+    }
+    fetchProjects()
+  }, [])
+
   return (
     <section id="projects" className="relative py-20 bg-white dark:bg-black">
       {/* Background Effects */}
-      <div className="absolute bottom-0 right-0 w-full h-96 bg-gradient-to-t from-purple-100/20 dark:from-purple-900/20 via-transparent to-transparent" />
+      <div className="absolute bottom-0 right-0 w-full h-96 bg-gradient-to-t from-sky-100/20 dark:from-sky-900/20 via-transparent to-transparent" />
 
       <div className="container max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
         {/* Section Header */}
@@ -46,7 +44,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400"
+            className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-indigo-600 dark:from-sky-400 dark:to-indigo-400"
           >
             Featured Projects
           </motion.h2>
@@ -57,7 +55,7 @@ export default function Projects() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-lg text-gray-600 dark:text-gray-300"
           >
-            Showcasing some of my recent work and passion projects
+            I'm gonna be honest. Most of these projects are only half done. A lot of my other work are private 🫤
           </motion.p>
         </div>
 
@@ -65,7 +63,7 @@ export default function Projects() {
         <div className="grid gap-8 lg:grid-cols-2">
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -101,7 +99,7 @@ export default function Projects() {
               {/* Project Content */}
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 
-                             group-hover:text-purple-600 dark:group-hover:text-purple-400 
+                             group-hover:text-sky-600 dark:group-hover:text-sky-400 
                              transition-colors">
                   {project.title}
                 </h3>
@@ -114,11 +112,11 @@ export default function Projects() {
                   <motion.a
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    href={project.demoUrl}
-                    className="px-6 py-2.5 bg-purple-600 dark:bg-purple-500 text-white 
-                             rounded-lg flex items-center gap-2 hover:bg-purple-700 
-                             dark:hover:bg-purple-600 transition-colors shadow-lg 
-                             shadow-purple-500/20"
+                    href={project.demourl}
+                    className="px-6 py-2.5 bg-sky-600 dark:bg-sky-500 text-white 
+                             rounded-lg flex items-center gap-2 hover:bg-sky-700 
+                             dark:hover:bg-sky-600 transition-colors shadow-lg 
+                             shadow-sky-500/20"
                   >
                     Live Demo
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,7 +127,7 @@ export default function Projects() {
                   <motion.a
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    href={project.githubUrl}
+                    href={project.githuburl}
                     className="px-6 py-2.5 bg-white dark:bg-gray-800 text-gray-800 
                              dark:text-white rounded-lg flex items-center gap-2 
                              hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors 

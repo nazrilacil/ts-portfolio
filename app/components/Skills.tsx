@@ -6,10 +6,13 @@ const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "React", level: 90 },
+      { name: "React.js", level: 90 },
+      { name: "Vue.js", level: 90 },
       { name: "Next.js", level: 85 },
-      { name: "TypeScript", level: 80 },
+      { name: "TypeScript", level: 60 },
+      { name: "JavaScript", level: 80 },
       { name: "TailwindCSS", level: 95 },
+      { name: "Laravel", level: 75 },
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -22,8 +25,11 @@ const skillCategories = [
     skills: [
       { name: "Node.js", level: 85 },
       { name: "Express", level: 80 },
+      { name: "Python", level: 70 },
+      { name: "PHP", level: 80 },
       { name: "MongoDB", level: 75 },
       { name: "PostgreSQL", level: 70 },
+      { name: "MySQL", level: 70 },
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,6 +44,9 @@ const skillCategories = [
       { name: "AWS", level: 70 },
       { name: "Git", level: 90 },
       { name: "CI/CD", level: 80 },
+      { name: "Jenkins", level: 75 },
+      { name: "Loki", level: 65 },
+      { name: "Pulumi", level: 60 },
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +59,7 @@ const skillCategories = [
 export default function Skills() {
   return (
     <section id="skills" className="relative py-20 bg-white dark:bg-black">
-      <div className="absolute top-0 right-0 w-full h-96 bg-gradient-to-b from-purple-100/20 dark:from-purple-900/20 via-transparent to-transparent" />
+      <div className="absolute top-0 right-0 w-full h-96 bg-gradient-to-b from-sky-100/20 dark:from-sky-900/20 via-transparent to-transparent" />
       
       <div className="container max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-20">
@@ -58,7 +67,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400"
+            className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-indigo-600 dark:from-sky-400 dark:to-indigo-400"
           >
             Technical Expertise
           </motion.h2>
@@ -81,14 +90,14 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: categoryIndex * 0.2 }}
-              className="group relative p-8 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-xl dark:shadow-gray-900/10 hover:border-purple-500/50 dark:hover:border-purple-500/50 transition-all duration-300"
+              className="group relative p-8 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-xl dark:shadow-gray-900/10 hover:border-sky-500/50 dark:hover:border-sky-500/50 transition-all duration-300"
             >
 
               <div className="relative">
                 <div className="flex items-center gap-4 mb-8">
                   <motion.span 
                     whileHover={{ scale: 1.1 }}
-                    className="p-3 bg-purple-500/10 dark:bg-purple-500/20 rounded-xl text-purple-600 dark:text-purple-400 ring-1 ring-purple-500/20 dark:ring-purple-500/30"
+                    className="p-3 bg-sky-500/10 dark:bg-sky-500/20 rounded-xl text-sky-600 dark:text-sky-400 ring-1 ring-sky-500/20 dark:ring-sky-500/30"
                   >
                     {category.icon}
                   </motion.span>
@@ -110,7 +119,7 @@ export default function Skills() {
                         <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
                           {skill.name}
                         </span>
-                        <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
+                        <span className="text-sm font-medium text-sky-600 dark:text-sky-400">
                           {skill.level}%
                         </span>
                       </div>
@@ -124,7 +133,7 @@ export default function Skills() {
                             ease: [0.34, 1.56, 0.64, 1],
                             delay: (categoryIndex * 0.2) + (skillIndex * 0.1) 
                           }}
-                          className="h-full bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full relative"
+                          className="h-full bg-gradient-to-r from-sky-500 to-indigo-500 rounded-full relative"
                         >
                           {/* Animated Glow Effect */}
                           <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent animate-shimmer" />

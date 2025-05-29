@@ -59,14 +59,8 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="relative group">
-              <motion.span
-                className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-500"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              >
-                AM
-              </motion.span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500/50 group-hover:w-full transition-all duration-300" />
+              <img src="/images/logo.png" className="h-8" />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500/50 group-hover:w-full transition-all duration-300" />
             </Link>
 
             {/* Controls */}
@@ -96,7 +90,7 @@ export default function Navbar() {
                   <motion.svg
                     initial={{ rotate: 30 }}
                     animate={{ rotate: 0 }}
-                    className="w-5 h-5 text-purple-600"
+                    className="w-5 h-5 text-sky-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -169,16 +163,16 @@ export default function Navbar() {
             >
               <div className="min-h-screen flex flex-col">
                 {/* Menu Header */}
-                <div className="p-6 border-b border-purple-500/10 dark:border-purple-500/5">
+                <div className="p-6 border-b border-sky-500/10 dark:border-sky-500/5">
                   <div className="flex items-center justify-between">
-                    <h2 className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-500">
+                    <h2 className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-sky-500">
                       Navigation
                     </h2>
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       onClick={() => setIsMenuOpen(false)}
-                      className="p-2 rounded-full hover:bg-purple-500/10 transition-colors"
+                      className="p-2 rounded-full hover:bg-sky-500/10 transition-colors"
                     >
                       <svg
                         className="w-6 h-6 text-gray-600 dark:text-gray-300"
@@ -210,16 +204,16 @@ export default function Navbar() {
                       >
                         <Link
                           href={link.href}
-                          className="group relative flex items-center p-4 text-gray-800 dark:text-gray-200 rounded-xl transition-all duration-300 hover:bg-purple-500/5 dark:hover:bg-purple-900/10 no-scrollbar"
+                          className="group relative flex items-center p-4 text-gray-800 dark:text-gray-200 rounded-xl transition-all duration-300 hover:bg-sky-500/5 dark:hover:bg-sky-900/10 no-scrollbar"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {/* Animated Dot Indicator */}
-                          <span className="absolute left-0 w-1 h-8 rounded-r-full bg-purple-500 scale-y-0 group-hover:scale-y-100 transition-transform origin-left" />
+                          <span className="absolute left-0 w-1 h-8 rounded-r-full bg-sky-500 scale-y-0 group-hover:scale-y-100 transition-transform origin-left" />
 
                           {/* Link Content */}
                           <div className="flex items-center gap-4 ml-2">
                             {/* you can add icons guys if you want ......for each link here */}
-                            <span className="w-2 h-2 rounded-full bg-purple-500/50 group-hover:scale-150 transition-transform" />
+                            <span className="w-2 h-2 rounded-full bg-sky-500/50 group-hover:scale-150 transition-transform" />
 
                             {/* Label with hover effect */}
                             <span className="text-lg font-medium group-hover:translate-x-1 transition-transform no-scrollbar">
@@ -233,7 +227,7 @@ export default function Navbar() {
                 </nav>
 
                 {/* Menu Footer */}
-                <div className="p-6 border-t border-purple-500/10 dark:border-purple-500/5">
+                <div className="p-6 border-t border-sky-500/10 dark:border-sky-500/5">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500 dark:text-gray-400">
                       © 2024 Arthur Morgan
@@ -244,7 +238,7 @@ export default function Navbar() {
                       onClick={() =>
                         setTheme(theme === "dark" ? "light" : "dark")
                       }
-                      className="p-2 rounded-full bg-purple-500/10 hover:bg-purple-500/20 transition-colors"
+                      className="p-2 rounded-full bg-sky-500/10 hover:bg-sky-500/20 transition-colors"
                     >
                       {theme === "dark" ? (
                         <motion.svg
@@ -264,7 +258,7 @@ export default function Navbar() {
                         <motion.svg
                           initial={{ rotate: 30 }}
                           animate={{ rotate: 0 }}
-                          className="w-5 h-5 text-purple-600"
+                          className="w-5 h-5 text-sky-600"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
