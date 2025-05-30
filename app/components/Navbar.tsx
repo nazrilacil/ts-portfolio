@@ -230,7 +230,7 @@ export default function Navbar() {
                 <div className="p-6 border-t border-sky-500/10 dark:border-sky-500/5">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                      © 2024 Arthur Morgan
+                      © 2025 Nazril Acil
                     </span>
                     <motion.button
                       whileHover={{ scale: 1.1 }}
