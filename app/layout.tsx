@@ -25,14 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta name="keywords" content="web developer, frontend, backend, fullstack, portfolio, Acil Nazril, Nazrilacil, Nazril Muhammad Mirza, Nazril Acil">
+      <meta name="keywords" content="web developer, frontend, backend, fullstack, portfolio, Acil Nazril, Nazrilacil, Nazril Muhammad Mirza, Nazril Acil" />
       <meta name="robots" content="all" />
-      <meta name="author" content="Nazril Acil">
-      <meta name="robots" content="index, follow">
-      <meta property="og:title" content="Nazril Acil | Web Developer Portfolio">
-      <meta property="og:description" content="Lihat proyek dan keahlian Nazril Acil di bidang pengembangan web frontend dan backend.">
-      <meta property="og:url" content="https://nazril-acil.vercel.app">
-      <meta property="og:type" content="website">
+      <meta name="author" content="Nazril Acil" />
+      <meta name="robots" content="index, follow" />
+      <meta property="og:title" content="Nazril Acil | Web Developer Portfolio" />
+      <meta property="og:description" content="Lihat proyek dan keahlian Nazril Acil di bidang pengembangan web frontend dan backend." />
+      <meta property="og:url" content="https://nazril-acil.vercel.app" />
+      <meta property="og:type" content="website" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
