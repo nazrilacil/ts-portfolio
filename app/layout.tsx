@@ -19,7 +19,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nazril Acil",
+  "url": "https://nazril-acil.vercel.app",
+  "image": "https://nazril-acil.vercel.app/me.webp",
+  "sameAs": [
+    "https://github.com/nazrilacil",
+    "https://instagram.com/nazrilacil"
+  ],
+  "jobTitle": "Web Developer",
+  "description": "Nazril Acil adalah seorang pengembang web, aplikasi dan teknologi."
+}
+  </script>
 <title>Nazril Acil | Web Developer Portfolio</title>
+      <meta name="robots" content="index, follow" />
+      <meta name="description"
+    content="Nazril Acil adalah seorang pengembang web, aplikasi dan teknologi." />
+  <meta name="keywords"
+    content="Nazril Acil,Nazril Acil portfolio,Nazril Acil Portfolio,nazrilacil,nazril acil site,Nazril Acil Site,nazril acil me,nazril acil web,nazril acil github,nazrilacil site,nazrilacil uiverse,uiverse,nazril acil uiverse,nazril acil fullstack developer,frontend developer,backend developer,nazril muhammad mirza,muhammad nazril,nazril acil 一 fullstack developer" />
+  <meta name="author" content="Nazril Acil 一 Fullstack Developer" />
 <meta name="description" content="Lihat proyek dan keahlian Nazril Acil di bidang pengembangan web frontend dan backend."/>
 <meta property="og:url" content="https://nazril-acil.vercel.app/"/>
 <meta property="og:type" content="website"/>
