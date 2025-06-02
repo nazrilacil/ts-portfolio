@@ -13,24 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "About Nazril Acil",
-  description: "Hello! I'm Nazril Acil, a passionate full-stack web developer skilled in both frontend and backend technologies. I specialize in building responsive, clean, and high-performance websites and applications that provide real value to users and businesses.",
-  author: {
+    "@context": "https://schema.org",
     "@type": "Person",
-    name: "Nazril Acil"
-  },
-  datePublished: "2025-06-01",
-  publisher: {
-    "@type": "Organization",
-    name: "Nazril Acil | Portfolio",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://nazril-acil.vercel.app/logo.png"
+    "name": "Nazril Acil",
+    "url": "https://nazril-acil.vercel.app",
+    "image": "https://nazril-acil.vercel.app/me.webp",
+    "sameAs": [
+      "https://linkedin.com/in/nazril-acil",
+      "https://github.com/nazrilacil"
+    ],
+    "jobTitle": "Web Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "XTRAHERA"
     }
-  }
-};
+  };
 
 export default function RootLayout({
   children,
