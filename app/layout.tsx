@@ -12,6 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "About Nazril Acil",
+  description: "Hello! I'm Nazril Acil, a passionate full-stack web developer skilled in both frontend and backend technologies. I specialize in building responsive, clean, and high-performance websites and applications that provide real value to users and businesses.",
+  author: {
+    "@type": "Person",
+    name: "Nazril Acil"
+  },
+  datePublished: "2025-06-01",
+  publisher: {
+    "@type": "Organization",
+    name: "Nazril Acil | Portfolio",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://nazril-acil.vercel.app/logo.png"
+    }
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,25 +39,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Nazril Acil",
-  "url": "https://nazril-acil.vercel.app",
-  "image": "https://nazril-acil.vercel.app/me.webp",
-  "sameAs": [
-    "https://github.com/nazrilacil",
-    "https://instagram.com/nazrilacil"
-  ],
-  "jobTitle": "Web Developer",
-  "description": "Nazril Acil adalah seorang pengembang web, aplikasi dan teknologi."
-}
-  </script>
+  
 <title>Nazril Acil | Web Developer Portfolio</title>
       <meta name="robots" content="index, follow" />
       <meta name="description"
     content="Nazril Acil adalah seorang pengembang web, aplikasi dan teknologi." />
+       <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
   <meta name="keywords"
     content="Nazril Acil,Nazril Acil portfolio,Nazril Acil Portfolio,nazrilacil,nazril acil site,Nazril Acil Site,nazril acil me,nazril acil web,nazril acil github,nazrilacil site,nazrilacil uiverse,uiverse,nazril acil uiverse,nazril acil fullstack developer,frontend developer,backend developer,nazril muhammad mirza,muhammad nazril,nazril acil 一 fullstack developer" />
   <meta name="author" content="Nazril Acil 一 Fullstack Developer" />
