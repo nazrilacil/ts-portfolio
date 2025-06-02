@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -13,11 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Nazril Acil | Portfolio",
-  description: "Portofolio resmi Nazril Acil, seorang web developer fullstack yang berpengalaman dengan React, Next.js, dan Supabase.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,14 +19,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta name="keywords" content="web developer, frontend, backend, fullstack, portfolio, Acil Nazril, Nazrilacil, Nazril Muhammad Mirza, Nazril Acil" />
-      <meta name="robots" content="all" />
-      <meta name="author" content="Nazril Acil" />
-      <meta name="robots" content="index, follow" />
-      <meta property="og:title" content="Nazril Acil | Web Developer Portfolio" />
-      <meta property="og:description" content="Lihat proyek dan keahlian Nazril Acil di bidang pengembangan web frontend dan backend." />
-      <meta property="og:url" content="https://nazril-acil.vercel.app" />
-      <meta property="og:type" content="website" />
+<title>Nazril Acil | Web Developer Portfolio</title>
+<meta name="description" content="Lihat proyek dan keahlian Nazril Acil di bidang pengembangan web frontend dan backend."/>
+<meta property="og:url" content="https://nazril-acil.vercel.app/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Nazril Acil | Web Developer Portfolio"/>
+<meta property="og:description" content="Lihat proyek dan keahlian Nazril Acil di bidang pengembangan web frontend dan backend."/>
+<meta property="og:image" content="https://nazril-acil.vercel.app/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="nazril-acil.vercel.app"/>
+<meta property="twitter:url" content="https://nazril-acil.vercel.app/"/>
+<meta name="twitter:title" content="Nazril Acil | Web Developer Portfolio"/>
+<meta name="twitter:description" content="Lihat proyek dan keahlian Nazril Acil di bidang pengembangan web frontend dan backend."/>
+<meta name="twitter:image" content="https://nazril-acil.vercel.app/og-image.png"/>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
