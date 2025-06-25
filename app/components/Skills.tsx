@@ -7,12 +7,13 @@ const skillCategories = [
     title: "Frontend",
     skills: [
       { name: "React.js", level: 90 },
-      { name: "Vue.js", level: 90 },
       { name: "Next.js", level: 85 },
+      { name: "Vue.js", level: 90 },
+      { name: "Nuxt.js", level: 85 },
       { name: "TypeScript", level: 60 },
       { name: "JavaScript", level: 80 },
       { name: "TailwindCSS", level: 95 },
-      { name: "Laravel", level: 75 },
+      { name: "Astro", level: 70 },
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,11 +25,12 @@ const skillCategories = [
     title: "Backend",
     skills: [
       { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
+      { name: "Express", level: 60 },
+      { name: "Ruby", level: 75 },
       { name: "Python", level: 70 },
       { name: "PHP", level: 80 },
-      { name: "MongoDB", level: 75 },
-      { name: "PostgreSQL", level: 70 },
+      { name: "MongoDB", level: 65 },
+      { name: "Supabase", level: 75 },
       { name: "MySQL", level: 70 },
     ],
     icon: (
