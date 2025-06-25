@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
 
   const logos = [
-    '/kreate.jpeg',
+    '/logo.png',
     '/icx.png',
     '/finfolk.png'
   ]
